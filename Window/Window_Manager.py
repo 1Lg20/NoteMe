@@ -2,6 +2,7 @@ import sys
 from PyQt6.QtWidgets import QApplication
 import Window.Window_Class as Window_Class
 
+# Create Main Window
 def Create(Settings):
 	app = QApplication(sys.argv)
 	window=Window_Class.MainWindow(Settings["Width"], Settings["Height"])

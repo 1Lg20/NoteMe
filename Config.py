@@ -1,3 +1,4 @@
+# Config
 UserFolder=""
 UserPreference="/UserPreference.json"
 UserNote="/Notes.db"

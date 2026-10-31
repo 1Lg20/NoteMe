@@ -1,6 +1,9 @@
 from PyQt6.QtWidgets import QMainWindow
 from PyQt6.QtGui import QIcon
 
+
+# Main Window class
+
 class MainWindow(QMainWindow):
 	def __init__(self, width, height):
 		super().__init__()

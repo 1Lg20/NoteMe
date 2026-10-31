@@ -1,6 +1,8 @@
 import sqlite3
 import Config
 
+
+# Check DB if has the correct table, in case create it
 def DB_Check():
 	connection=sqlite3.connect(Config.UserFolder+Config.UserNote)
 	

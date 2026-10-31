@@ -5,6 +5,7 @@ import Window.Window_Manager
 from Storage import Conf_Loader
 from Storage.Local_DB_Manager import DB_Check
 
+# Check if user Folder exist
 def Folder_Check():
 	OS=platform.system()
 	if OS=="Linux":
@@ -16,6 +17,7 @@ def Folder_Check():
 		print("OS not recognize")
 		exit()
 
+# Launch app
 def main():	
 	Config.UserFolder=os.path.join(os.path.expanduser("~"), ".NoteMe")
 	Folder_Check()
