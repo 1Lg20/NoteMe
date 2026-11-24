@@ -29,3 +29,19 @@ def DB_Check():
 		print("Table Note OK")
 
 	connection.close()
+
+def DB_GetGroup():
+	connection=sqlite3.connect(Config.UserFolder+Config.UserNote)
+	cursor=connection.cursor()
+	cursor.execute("SELECT * FROM 'Group'")
+	Groups=cursor.fetchall()
+	connection.close()
+	return Groups
+
+def DB_GetNote(Group):
+	connection=sqlite3.connect(Config.UserFolder+Config.UserNote)
+	cursor=connection.cursor()
+	cursor.execute("SELECT * FROM 'Note' where Group_ID="+str(Group))
+	Notes=cursor.fetchall()
+	connection.close()
+	return Notes
