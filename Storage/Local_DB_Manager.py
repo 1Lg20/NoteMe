@@ -38,10 +38,18 @@ def DB_GetGroup():
 	connection.close()
 	return Groups
 
-def DB_GetNote(Group):
+def DB_GetNotesFromGroup(Group):
 	connection=sqlite3.connect(Config.UserFolder+Config.UserNote)
 	cursor=connection.cursor()
 	cursor.execute("SELECT * FROM 'Note' where Group_ID="+str(Group))
 	Notes=cursor.fetchall()
 	connection.close()
 	return Notes
+
+def DB_GetNoteFromID(ID):
+	connection=sqlite3.connect(Config.UserFolder+Config.UserNote)
+	cursor=connection.cursor()
+	cursor.execute("SELECT * FROM 'Note' where ID="+str(ID))
+	Note=cursor.fetchall()
+	connection.close()
+	return Note

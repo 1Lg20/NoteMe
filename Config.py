@@ -12,7 +12,6 @@ GroupTableCreate="""
 GroupTable=[(0, 'ID', 'INTEGER', 0, None, 1), (1, 'GroupName', 'TEXT', 1, None, 0)]
 CreateDefGroup="INSERt INTO 'Group' ('GroupName') VALUES('NoGroup')"
 
-
 NoteTableCreate="""
 	CREATE TABLE 'Note' ( 
 		ID INTEGER PRIMARY KEY AUTOINCREMENT, 
@@ -23,8 +22,6 @@ NoteTableCreate="""
 	)
 	"""
 NoteTable=[(0, 'ID', 'INTEGER', 0, None, 1), (1, 'Group_ID', 'INTERGET', 1, None, 0), (2, 'Title', 'TEXT', 1, None, 0), (3, 'Content', 'TEXT', 1, None, 0)]
-
-
 
 Defconf={
 	"Width":1000,
