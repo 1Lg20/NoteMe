@@ -1,4 +1,4 @@
-from PyQt6.QtWidgets import QMainWindow, QVBoxLayout, QHBoxLayout, QLabel, QWidget, QPushButton
+from PyQt6.QtWidgets import QMainWindow, QVBoxLayout, QHBoxLayout, QLabel, QWidget, QPushButton, QScrollArea
 from PyQt6.QtGui import QIcon
 from PyQt6.QtCore import Qt
 from Storage import Local_DB_Manager
@@ -19,7 +19,10 @@ class MainWindow(QMainWindow):
 		self.__layout.setContentsMargins(0, 0, 0, 0)
 		self.__layout.setAlignment(Qt.AlignmentFlag.AlignTop)
 		self.__Container.setLayout(self.__layout)
-		self.setCentralWidget(self.__Container)
+		self.__ScrollArea=QScrollArea()
+		self.__ScrollArea.setWidgetResizable(True)
+		self.__ScrollArea.setWidget(self.__Container)
+		self.setCentralWidget(self.__ScrollArea)
 		self.__righe=[]
 		self.__GetNote()
 
